@@ -85,7 +85,7 @@
                 break;
             case kCLAuthorizationStatusAuthorizedAlways:
             case kCLAuthorizationStatusAuthorizedWhenInUse:{
-                self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:self.UUID] identifier:@"com.antlinker.iBeacon"];
+                self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:self.UUID] identifier:@"identifier"];
                 self.beaconRegion.notifyEntryStateOnDisplay = YES;
                 self.beaconRegion.notifyOnExit = YES;
                 self.beaconRegion.notifyOnEntry = YES;
@@ -150,7 +150,7 @@
 
 //- (CLBeaconRegion *)beaconRegion {
 //    if (!_beaconRegion) {
-//        _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:self.UUID] identifier:@"com.antlinker.iBeacon"];
+//        _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:self.UUID] identifier:@"identifier"];
 //        _beaconRegion.notifyEntryStateOnDisplay = YES;
 //        // 监听该UUID下的所有Beacon设备
 //        //- (instancetype)initWithProximityUUID:(NSUUID *)proximityUUID identifier:(NSString *)identifier;

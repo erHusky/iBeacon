@@ -93,7 +93,7 @@
             CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:self.UUID]
                                                                               major:self.major
                                                                               minor:self.minor
-                                                                         identifier:@"com.antlinker.iBeacon"];
+                                                                         identifier:@"identifier"];
             NSDictionary *peripheralData = [region peripheralDataWithMeasuredPower:[NSNumber numberWithInteger:self.measuredPower]];
             if(peripheralData) {
                 [_peripheralManager startAdvertising:peripheralData];
