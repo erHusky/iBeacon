@@ -22,7 +22,7 @@ _peripheraManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:dis
 
 ```objc
 NSDictionary *peripheralData = nil;
-CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:UUID major:0 minor:1 identifier:@"com.antlinker.iBeacon"];
+CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:UUID major:0 minor:1 identifier:@"identifier"];
 // 设置信号强度，值为负数，约接近 0 信号越强
 peripheralData = [region peripheralDataWithMeasuredPower:[NSNumber numberWithInteger:self.measuredPower]];
 if (peripheralData) {
@@ -79,7 +79,7 @@ typedef NS_ENUM(NSInteger, CLProximity) {
 ```objc
 - (CLBeaconRegion *)beaconRegion {
     if (!_beaconRegion) {
-        _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:UUIDString] identifier:@"com.antlinker.iBeacon"];
+        _beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:UUIDString] identifier:@"identifier"];
         _beaconRegion.notifyEntryStateOnDisplay = YES;
         _beaconRegion.notifyOnExit = YES;
         _beaconRegion.notifyOnEntry = YES;
